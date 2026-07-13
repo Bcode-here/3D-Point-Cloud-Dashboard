@@ -30,9 +30,7 @@ function PointCloud() {
         setTotalPoints,
     } = useViewer();
 
-    const plyUrl =
-        "https://my.microsoftpersonalcontent.com/personal/d9506e14cec54de4/_layouts/15/download.aspx?UniqueId=ebec454f-8e02-4d49-9b0d-c81279a8ae37&Translate=false&ApiVersion=2.0";
-
+    const plyUrl = `${import.meta.env.BASE_URL}sample_point_cloud.ply`;
     const { geometry, material } = usePLYLoader(plyUrl);
 
     // Transform geometry ONLY ONCE
@@ -229,7 +227,7 @@ export default function Viewer() {
                     <p>🔍 Mouse Wheel : Zoom</p>
                     <p className="dataset">
                         Dataset:
-                        <strong> Road_Design_Charholi.ply</strong>
+                        <strong> sample_point_cloud</strong>
                     </p>
                 </div>
             </div>

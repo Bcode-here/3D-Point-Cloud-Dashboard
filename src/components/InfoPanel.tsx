@@ -42,8 +42,7 @@ export default function InfoPanel() {
 
                     <p>
 
-                        Road_Design_Charholi.ply
-
+                        sample_point_cloud.pl
                     </p>
 
                 </div>

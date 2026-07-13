@@ -20,6 +20,8 @@ import { usePLYLoader } from "../hooks/usePLYLoader";
 import { useViewer } from "../context/ViewerContext";
 import Loading from "./Loading.tsx";
 
+
+
 function PointCloud() {
     const {
         pointSize,
@@ -28,7 +30,11 @@ function PointCloud() {
         setTotalPoints,
     } = useViewer();
 
-    const { geometry, material } = usePLYLoader("/Road_Design_Charholi.ply");
+    const plyUrl =
+        "https://my.microsoftpersonalcontent.com/personal/d9506e14cec54de4/_layouts/15/download.aspx?UniqueId=ebec454f-8e02-4d49-9b0d-c81279a8ae37&Translate=false&ApiVersion=2.0";
+
+    const { geometry, material } = usePLYLoader(plyUrl);
+
     // Transform geometry ONLY ONCE
     useEffect(() => {
         geometry.computeBoundingBox();

@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: Inter, Segoe UI, sans-serif;
+  background: #0b1120;
+  color: #fff;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #0b1120;
+}
+
+/* Header occupies top */
+.dashboard {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 260px 1fr 300px;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.left-panel {
+  background: #111827;
+  border-right: 1px solid rgba(255, 255, 255, .08);
+  overflow: auto;
+}
+
+/* Viewer */
+.viewer-panel {
+  position: relative;
+  background: #020617;
+  overflow: hidden;
+}
+
+/* Info */
+.right-panel {
+  background: #111827;
+  border-left: 1px solid rgba(255, 255, 255, .08);
+  overflow: auto;
+}
+
+@media(max-width:1200px) {
+
+  .dashboard {
+    grid-template-columns: 220px 1fr 260px;
+  }
+
+}
+
+@media(max-width:900px) {
+
+  .dashboard {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+  }
+
+  .left-panel {
+    height: 220px;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+  }
+
+  .right-panel {
+    height: 240px;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, .08);
+  }
+
+}

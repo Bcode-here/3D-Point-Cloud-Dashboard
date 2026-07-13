@@ -1,0 +1,125 @@
+.viewer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    background: #020617;
+}
+
+.viewer canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+}
+
+/* ==========================
+   Viewer Overlay
+========================== */
+
+.viewer-overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+
+    background: rgba(15, 23, 42, 0.88);
+    backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 14px;
+
+    padding: 18px;
+
+    min-width: 280px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+.overlay-content h3 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.overlay-content p {
+    color: #cbd5e1;
+    font-size: 13px;
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+.dataset {
+    margin-top: 15px;
+    padding-top: 12px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    color: #60a5fa;
+}
+
+.dataset strong {
+    color: white;
+}
+
+/* ==========================
+   Loading Screen
+========================== */
+
+.loading {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+
+    color: white;
+}
+
+.spinner {
+    width: 55px;
+    height: 55px;
+
+    border: 5px solid #334155;
+    border-top: 5px solid #2563eb;
+
+    border-radius: 50%;
+
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media (max-width: 768px) {
+    .viewer-overlay {
+        left: 10px;
+        right: 10px;
+        top: 10px;
+
+        min-width: auto;
+
+        padding: 15px;
+    }
+
+    .overlay-content h3 {
+        font-size: 16px;
+    }
+
+    .overlay-content p {
+        font-size: 12px;
+    }
+}

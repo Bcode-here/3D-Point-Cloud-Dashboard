@@ -229,10 +229,9 @@ export default defineConfig([
       },
       // other options...
     },
-  },
-])
+  
 
 ```
 =======
 # 3D-Point-Cloud-Dashboard
->>>>>>> ff53ccd3d04abd5a5c2932f58b9e3ff00462d541
+>>>>>

@@ -124,9 +124,9 @@ npm run preview
 
 ## 🌍 Live Demo
 
-GitHub Pages
+Vercel Pages
 
-https://bcode-here.github.io/3D-Point-Cloud-Dashboard/
+https://3-d-point-cloud-dashboard-am1wa4yak-bcode-here.vercel.app/
 
 ---
 
